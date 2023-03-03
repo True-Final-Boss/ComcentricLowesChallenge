@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/SearchFragment"
+    android:id="@+id/weather_navigation">
+
+    <fragment
+        android:id="@+id/SearchFragment"
+        android:label="Search A city"
+        android:name="com.example.comcentriclowes.ui.SearchFragment"
+        tools:layout="@layout/fragment_search">
+
+        <argument
+            android:name="labelCity"
+            app:argType="string"/>
+
+        <action
+            android:id="@+id/action_SearchFragment_to_ForecastFragment"
+            app:destination="@id/ForecastFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ForecastFragment"
+        android:label="@string/frag_label"
+        android:name="com.example.comcentriclowes.ui.ForecastFragment"
+        tools:layout="@layout/fragment_forecast">
+
+        <argument
+            android:name="labelCity"
+            app:argType="string"/>
+
+        <action
+            android:id="@+id/action_ForecastFragment_to_DetailsFragment"
+            app:destination="@id/DetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/DetailsFragment"
+        android:label="@string/frag_label"
+        android:name="com.example.comcentriclowes.ui.DetailsFragment"
+        tools:layout="@layout/fragment_details">
+
+        <argument
+            android:name="labelCity"
+            app:argType="string"/>
+
+    </fragment>
+
+</navigation>

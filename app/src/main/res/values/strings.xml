@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ComcentricLowes</string>
+    <string name="frag_label">{labelCity}</string>
+</resources>
